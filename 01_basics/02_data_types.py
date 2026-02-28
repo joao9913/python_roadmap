@@ -98,7 +98,7 @@ set_a = {1, 2, 3}
 set_b = {2, 3, 4}
 
 if __name__ == "__main__":
-    print("\n--- Set Oprations ---")
+    print("\n--- Set Operations ---")
     print("Union: ", set_a | set_b)
     print("Intersection: ", set_b & set_b)
     print("Difference: ", set_a - set_b)
