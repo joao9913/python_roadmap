@@ -6,8 +6,12 @@
 age = 20
 
 # a) Print "Adult" if age is 18 or older
+if age >= 18:
+    print("Adult")
 
 # b) Otherwise print "Minor"
+else:
+    print("Minor")
 
 
 # ------------------
@@ -19,7 +23,12 @@ number = 7
 
 # a) Print "Even" if the number is even
 
+if number % 2 == 0:
+    print("Even")
+
 # b) Print "Odd" otherwise
+else:
+    print("Odd")
 
 
 # ------------------
@@ -35,6 +44,15 @@ score = 82
 # "C" if score >= 70
 # "D" otherwise
 
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("D")
+
 
 # ------------------
 # Logical Operators
@@ -48,6 +66,12 @@ is_sunny = True
 # temperature is greater than 20 AND it is sunny
 # Otherwise print "Stay home"
 
+if temperature > 20 and is_sunny:
+    print("Go to the beach")
+else:
+    print("Stay home")
+
+
 # ------------------
 # OR Condition
 # ------------------
@@ -57,6 +81,11 @@ day = "Saturday"
 
 # Print "Weekend" if the day is Saturday OR Sunday
 # Otherwise print "Weekday"
+
+if day == "Saturday" or day == "Sunday":
+    print("Weekend")
+else:
+    print("Weekday")
 
 
 # ------------------
@@ -70,6 +99,11 @@ is_logged_in = True
 # Otherwise print "Access denied"
 # Use the NOT operator explicitly
 
+if not is_logged_in:
+    print("Access denied")
+else:
+    print("Access granted")
+
 
 # ------------------
 # Truthiness
@@ -79,6 +113,10 @@ is_logged_in = True
 items = []
 
 # a) Print "Cart is empty" if the list is empty
+if not items:
+    print("Cart is empty")
+else:
+    print("Cart has items")
 
 
 # ------------------
@@ -91,6 +129,11 @@ username = "joao_admin"
 # a) If "admin" is in the username, print "Admin user"
 # b) Otherwise print "Regular user"
 
+if "admin" in username:
+    print("Admin user")
+else:
+    print("Regular user")
+
 
 # ------------------
 # Chained Comparisons
@@ -101,6 +144,9 @@ num = 19
 
 # Print "Within range" if num is strictly between 10 and 20
 # Use chained comparison (not two separate conditions).
+
+if 10 < num < 20:
+    print("Within range")
 
 
 # ------------------
@@ -119,12 +165,20 @@ has_ticket = True
 # Otherwise:
 #   Print "Underage"
 
+if age >= 18:
+    if has_ticket:
+        print("Entry allowed")
+    else:
+        print("Ticket required")
+else:
+    print("Underage")
+
 
 # ------------------
 # Overlapping Condition Trap
 # ------------------
 
-# 1. Given:
+# 1. Given: 
 score = 95
 
 # Write conditions so that:
@@ -132,6 +186,13 @@ score = 95
 # - "Pass" prints for scores >= 60
 # - "Fail" prints otherwise
 # Make sure "Excelent" is not skipped
+
+if score >= 90:
+    print("Excellent")
+elif score >= 60:
+    print("Pass")
+else:
+    print("Fail")
 
 
 # ------------------
@@ -143,6 +204,9 @@ value = None
 
 # a) Check properly if value is None
 # b) Print "Value missing" if it is None
+
+if value is None:
+    print("Value missing")
 
 
 # ------------------
@@ -158,6 +222,7 @@ if x != 0 and 10 / x > 1:
 else:
     print("Condition not met")
 
+# Prints Condition not met, because x == 0 and x cant be 0 for the if to run
 
 
 # ------------------
@@ -171,3 +236,6 @@ age = 17
 # "Adult" if age >= 18
 # "Minor" otherwise
 # Use a one-line conditional expression
+
+status = "Adult" if age >= 18 else "Minor"
+print(status)
