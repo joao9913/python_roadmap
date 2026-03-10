@@ -58,8 +58,8 @@ print("")
 # 1 x 2 x 3 x 4 x 5 = 120
 
 def factorial(n):
-    if n == 1 or n == 2:
-        return n
+    if n == 0:
+        return 1
 
     return n * factorial(n - 1)
 
@@ -89,8 +89,8 @@ print()
 # 2 x 2 x 2 = 8
 
 def power(base, exponent):
-    if exponent == 1 or base == 1:
-        return base
+    if exponent == 0:
+        return 1
 
     return base * power(base, exponent - 1)
 
@@ -106,7 +106,7 @@ print()
 # 7. Create a function fibonacci(n)
 # Return the nth Fibonacci number
 # Sequence: 0, 1, 1, 2, 3, 5, 8...
-# fibonacci(7) = 7
+# fibonacci(7) = 8
 
 def fibonacci(n):
     if n <= 1:
@@ -123,7 +123,7 @@ print()
 # Print the first n Fibonacci numbers
 
 def print_fibonacci(n):
-    for i in range(n+1):
+    for i in range(n):
         print(fibonacci(i))
 
 print("#8")
@@ -186,8 +186,8 @@ print()
 # Return the largest number in a list using recursion
 
 def find_max(numbers):
-    if numbers == []:
-        return 0
+    if len(numbers) == 1:
+        return numbers[0]
 
     return numbers[0] if numbers[0] > find_max(numbers[1:]) else find_max(numbers[1:])
 
@@ -256,7 +256,7 @@ print()
 
 def multiply_list(numbers):
     if numbers == []:
-        return numbers[0]
+        return 1
     elif len(numbers) == 1:
         return numbers[0]
 
@@ -314,6 +314,25 @@ print()
 # Example:
 # [1, [2, 3], [4, [5]]] -> [1, 2, 3, 4, 5]
 
+def flatten_list(nested_list):
+    if nested_list == []:
+        return nested_list
+
+    first_element = nested_list[0]
+    rest_element = nested_list[1:]
+
+    if isinstance(first_element, list):
+        return flatten_list(first_element) + flatten_list(rest_element)
+    else:
+        return [first_element] + flatten_list(rest_element)
+
+
+example_list = [1, [2, 3], [4, [5]]]    # [1, 2, 3, 4, 5]
+
+print("#19")
+print(flatten_list(example_list))
+print()
+
 
 # ------------------
 # Bonus Challenge
@@ -321,3 +340,17 @@ print()
 
 # 20. Create a function count_occurrences(numbers, target)
 # Return how many times target appears in the list
+
+def count_occurrences(numbers, target):
+    if target not in numbers:
+        return 0
+
+    return 1 + count_occurrences(numbers[1:], target) if numbers[0] == target else count_occurrences(numbers[1:], target)
+
+print("#20")
+
+numbers = [1, 1, 2, 2, 2, 3]
+target = 3
+
+print(count_occurrences(numbers, target))
+print()
