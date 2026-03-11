@@ -171,11 +171,9 @@ print("#10")
 print()
 
 def gen_filter(numbers):
-    current = 0
-
-    while current < len(numbers):
-        if numbers[current] > 10: yield numbers[current]
-        current += 1
+    for num in numbers:
+        if num > 10:
+            yield num
 
 numbers = [5, 12, 17, 3]
 gen = gen_filter(numbers)
