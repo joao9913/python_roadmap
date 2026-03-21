@@ -1,0 +1,104 @@
+01_basics
+    - 01_variables
+    - 02_data_types
+    - 03_strings
+    - 04_input_output
+
+02_control_flow
+    - 01_if_statements
+    - 02_for_loops
+    - 03_while_loops
+    - 04_match_case
+    - 05_list_comprehension
+
+03_functions
+    - 01_basic_functions
+    - 02_scope
+    - 03_args_kwargs
+    - 04_lambda_functions
+    - 05_recursion
+
+04_advanced_functions
+    - 01_iterators
+    - 02_generators
+    - 03_generator_expressions
+    - 04_decorators
+
+05_paradigms
+    - 01_procedural_programming
+    - 02_functional_programming
+    - 03_object_oriented_programming
+
+06_oop
+    - 01_classes_basics
+    - 02_instance_vs_class_vars
+    - 03_methods
+    - 04_staticmethod_classmethod
+    - 05_encapsulation_property
+    - 06_dunder_methods
+    - 07_inheritance
+    - 08_polymorphism
+    - 09_composition
+    - 10_abstract_classes
+    - 11_dataclasses
+
+07_design_patterns
+    - 01_design_patterns
+    - 02_singleton
+    - 03_factory
+    - 04_builder
+    - 05_adapter
+    - 06_facade
+    - 07_strategy
+    - 08_observer
+
+08_exceptions
+    - 01_try_except
+    - 02_multiple_exceptions
+    - 03_raise_exceptions
+    - 04_custom_exceptions
+
+09_dsa
+    - 01_arrays_linked_lists
+    - 02_hash_maps
+    - 03_heaps_stacks_queues
+    - 04_binary_search_tree
+    - 05_sorting_algorithms
+
+10_files
+    - 01_read_write_txt
+    - 02_csv_handling
+    - 03_json_handling
+    - 04_pathlib_usage
+    - 05_context_managers
+    - 06_regular_expressions
+
+11_modules_packages
+    - 01_importing_modules
+    - 02_creating_modules
+    - 03_name__main__
+
+12_concurrency
+    - 01_threading
+    - 02_multiprocessing
+    - 03_async_await
+    - 04_event_loop
+    - 05_global_interpreter_lock_gil
+    - 06_concurrent_features
+
+13_pandas
+    - 01_series_dataframe
+    - 02_indexing_filtering
+    - 03_groupby
+    - 04_merge_join
+    - 05_time_series
+    - 06_rolling_windows
+
+14_numpy
+    - 01_arrays
+    - 02_indexing_slicing
+    - 03_vectorization
+    - 04_broadcasting
+    - 05_linear_algebra
+
+99_projects
